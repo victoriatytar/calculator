@@ -28,8 +28,9 @@ function clearPressed() {
     display.value = null;
 }
 
-document.querySelector('.opers button sqrt').addEventListener('click', sqrtPressed);
+document.querySelector('.sqrt').addEventListener('click', sqrtPressed);
 
-function sqrtPressed(digit) {
-    display.value = Math.sqrt(digit)(display.value);
+function sqrtPressed(ev) {
+    let calculateFrom = display.value;
+    display.value = Math.sqrt(calculateFrom);
 }
