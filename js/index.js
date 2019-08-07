@@ -7,3 +7,29 @@ document
 function digitPressed(ev) {
     display.value += ev.target.innerText;
 }
+
+document
+    .querySelectorAll('.opers button')
+    .forEach( oper => oper.addEventListener('click', operPressed));
+
+function operPressed(ev) {
+    display.value += ev.target.innerText;
+}
+
+document.querySelector('.equal').addEventListener('click', equalPressed);
+
+function equalPressed() {
+    display.value = eval(display.value);
+}
+
+document.querySelector('.clear').addEventListener('click', clearPressed);
+
+function clearPressed() {
+    display.value = null;
+}
+
+document.querySelector('.opers button sqrt').addEventListener('click', sqrtPressed);
+
+function sqrtPressed(digit) {
+    display.value = Math.sqrt(digit)(display.value);
+}
