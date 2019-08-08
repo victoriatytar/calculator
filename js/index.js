@@ -31,6 +31,8 @@ function clearPressed() {
 document.querySelector('.sqrt').addEventListener('click', sqrtPressed);
 
 function sqrtPressed(ev) {
-    let calculateFrom = display.value;
-    display.value = Math.sqrt(calculateFrom);
+    /*let calculateFrom = display.value;
+    display.value = Math.sqrt(calculateFrom);*/
+    let evalResult = eval(display.value);
+    display.value = Math.sqrt(evalResult);
 }
